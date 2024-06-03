@@ -30,3 +30,21 @@ function addTodo() {
   listtdl.appendChild(itemall);
   inputtdl.value = '';
 }
+// Checking and delete todolist
+function okdel(e) {
+  const item = e.target;
+
+  //   check
+  if (item.classList[0] === 'check-button') {
+    const todolist = item.parentElement;
+    todolist.classList.toggle('checklist');
+  }
+
+  //   delete
+  if (item.classList[0] === 'trash-button') {
+    const todolist = item.parentElement;
+    todolist.remove();
+  }
+}
+buttontdl.addEventListener('click', clickButton);
+listtdl.addEventListener('click', okdel);
