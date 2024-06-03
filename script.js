@@ -22,6 +22,7 @@ function addTodo() {
   checkbutton.innerHTML = '<i class="fa-solid fa-check"></i>';
   checkbutton.classList.add('check-button');
   itemall.appendChild(checkbutton);
+
   const trashbutton = document.createElement('button');
   trashbutton.innerHTML = '<i class="fa-solid fa-trash"></i>';
   trashbutton.classList.add('trash-button');
